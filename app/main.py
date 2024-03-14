@@ -22,6 +22,6 @@ def home():
 @app.post("/predict", response_model=PredictionOut)
 def predict(payload: ArrayInput):
     prediction = predict_pipeline(payload.data)  # Assuming your model's predict_pipeline function accepts a list
-    return {"prediction result:": prediction}  # <- change here, in the text
+    return {"predictionResult": prediction}  # <- change here, in the text
 
 # To run, in the terminal, navigate to the directory containing main.py and run: uvicorn app.main:app --reload
