@@ -16,7 +16,7 @@ class PredictionOut(BaseModel):
 
 @app.get("/")
 def home():
-    return {"health_check": "OK", "model_version": model_version}
+    return {"health_check": "Very nice! Very Good!", "model_version": model_version}
 
 # Update the predict endpoint to accept an array and return a prediction
 @app.post("/predict", response_model=PredictionOut)
