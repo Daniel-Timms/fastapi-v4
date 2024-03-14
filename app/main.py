@@ -12,7 +12,7 @@ class ArrayInput(BaseModel):
 
 # Define the output format of your prediction endpoint
 class PredictionOut(BaseModel):
-    prediction_result: float  # or int/str, depending on what your model returns
+    predictionResult: float  # or int/str, depending on what your model returns
 
 @app.get("/")
 def home():
